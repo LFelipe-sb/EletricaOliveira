@@ -38,7 +38,7 @@ img{
 
 /*Menu*/
 .menu-bg{
-    background-color: #2c70ff;
+    background-color: #f7f7f7;
 }
 
 .menu{
@@ -52,7 +52,8 @@ img{
 }
 
 .menu a{
-    color: white;
+    color: #122ab2;
+    font-weight: bolder;
 }
 
 .menu-logo a{
@@ -109,6 +110,7 @@ img{
     flex: 2 1 300px; /* Vai pegar o elemento e fazer ele ocupar duas vezes o tamanho dos outros conteudos*/
     margin: 0 10px;
     align-self: flex-start;
+    text-align: justify;
 }
 /*No uso do Flex, o primeiro valor é o Grow que é o espacamento que o item vai ocupar em relacao ao tamanho dos demais itens do flex.*/
 /*O segundo valor é do Shrink que colocando o valor um ele continua quebrando o elemento mesmo que ja tenha chegado ao valor minimo definido no basis*/
@@ -156,24 +158,37 @@ img{
     margin: 10px;
 }
 
-.produtos-item h2{
-    font-size: 3em;
-    color: #a4a4a4;
-    background-color: #f7f7f7;
-    padding: 60px 20px;
+.produtos-item img{
+    width: 30%;
+    margin: 50px auto;
+}
+
+.produtos-item p{
+    font-size: 2em;
+    color: #000000;
+    padding: 0 20px 50px;
     text-align: center;
+    font-weight: bold;
 }
 
-.purple{
-    border-top: 8px solid #ae81ff;
+.eletrica{
+    background-color: #ae81ff;
 }
 
-.pink{
-    border-top: 8px solid #f9265e;
+.hidraulica{
+    background-color: #f9265e;
 }
 
-.blue{
-    border-top: 8px solid #66d9eb;
+.pintura{
+    background-color: #66d9eb;
+}
+
+.alvenaria{
+    background-color: yellow;
+}
+
+.reparos{
+    background-color: rgb(50, 205, 122);
 }
 
 /*Preços*/
@@ -274,6 +289,10 @@ img{
 
 .preco-item .ouro{
     color: #FFD700;
+}
+
+form img{
+    width: 10%;
 }
 
 @media (max-width: 1050px){
