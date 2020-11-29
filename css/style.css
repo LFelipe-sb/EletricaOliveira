@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
+
+body{
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+/*SuperInfo*/
+.superinfo-bg{
+    background-color: #122ab2;
+    color: white;
+}
+
+.superinfo a{
+    color: white;
+}
+
+.superinfo{
+    max-width: 80%; /*Limita o espaço do container a um tamanho maximo*/
+    display: flex; /*Adiciona o flex aos itens filhos, por padrao, os deixa lado a lado*/
+    justify-content: space-between; /*Ajusta o espaçamento para cada item*/
+    flex-wrap: wrap; /*Caso o espaço do container nao seja o suficiente para as informações, ele joga a info para a linha de baixo e nao permite a quebra do conteudo*/
+    margin: 0 auto;
+}
+
+.superinfo p, .superinfo a{
+    padding: 10px;
+}
+
+/*Menu*/
+.menu-bg{
+    background-color: #2c70ff;
+}
+
+.menu{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /*Alinha os flex-items ao centro verticalmente*/
+}
+
+.menu a{
+    color: white;
+}
+
+.menu-logo a{
+    font-size: 2.25em; /*Para trabalhar com "em" geralmente se faz o tamanho que voce deseja dividido do 16 */
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.menu-logo img{
+    width: 40%;
+}
+
+.menu-nav ul{
+    display: flex; /*Podemos ter flex dentro de outro flex, pois ele aplica somente aos seus filhos diretos*/
+    flex-wrap: wrap;
+}
+
+.menu-nav a{
+    font-size: 1.25em;
+    padding: 10px;
+    margin: 10px;
+    display: block; /*Deixando o elemento em bloco para poder interferir no padding dele.*/
+}
+
+.menu-nav a:hover{
+    color: #222;
+}
+
+/*Introdução*/
+
+.introducao{
+    font-size: 3em;
+    line-height: 1;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 60px 10px;
+    text-align: center;
+}
+
+/*Sobre*/
+
+.sobre{
+    border-top: 4px solid #2c70ff;
+    border-bottom: 4px solid #2c70ff;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 60px 0;
+    align-items: center;
+    display: flex; /*Deixar os textos e as imagens lado a lado*/
+    flex-wrap: wrap; /*Quebrar o conteudo do texto*/
+}
+
+.sobre-info{ /*Estudar melhor o basis, grow e shrink*/
+    flex: 2 1 300px; /* Vai pegar o elemento e fazer ele ocupar duas vezes o tamanho dos outros conteudos*/
+    margin: 0 10px;
+    align-self: flex-start;
+}
+/*No uso do Flex, o primeiro valor é o Grow que é o espacamento que o item vai ocupar em relacao ao tamanho dos demais itens do flex.*/
+/*O segundo valor é do Shrink que colocando o valor um ele continua quebrando o elemento mesmo que ja tenha chegado ao valor minimo definido no basis*/
+/*O terceiro valor é o basis, ele verifica quando nao esta mais sendo possivel conter na determinada linha os itens com aquele tamanho e ai ele quebra os itens para a linha de baixo, mantendo o tamanho minimo. Essa quebra de linha so sera possivel caso no elemento flex tenha a propriedade Wrap*/
+
+
+.sobre-info h1{
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+
+.sobre-info p{
+    font-size: 1.25em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+}
+
+.sobre-img{
+    flex: 1 1 160px;
+    margin: 10px 10px;
+}
+
+/*Produtos*/
+
+.produtos{
+    max-width: 80%;
+    margin: 60px auto;
+}
+
+.produtos h1{
+    font-size: 3em;
+    line-height: 1.5;
+    margin: 0 10px 60px 10px;
+}
+
+.produtos-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.produtos-item{
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.produtos-item h2{
+    font-size: 3em;
+    color: #a4a4a4;
+    background-color: #f7f7f7;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.purple{
+    border-top: 8px solid #ae81ff;
+}
+
+.pink{
+    border-top: 8px solid #f9265e;
+}
+
+.blue{
+    border-top: 8px solid #66d9eb;
+}
+
+/*Preços*/
+
+.preco{
+    background-color: #f7f7f7;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.preco-item{
+    flex: 1;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px 30px;
+    box-shadow: 0 0 20px black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preco-item h2{
+    font-size: 3em;
+    color: #a4a4a4;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.preco-item span{
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.preco-item sup{
+    font-size: 1.5rem;
+}
+
+.preco-item ul{
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 1.25em;
+    color: #7c7c7c;
+    font-style: italic;
+    text-align: center;
+    flex: 1;
+}
+
+.preco-item li:after{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #000;
+    border-radius: 80%;
+}
+
+.preco-item li{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.preco-item a{
+    max-width: 300px;
+    display: block;
+    margin: 0px auto;
+    border: 4px solid black;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.25em;
+    color: #222222;
+    padding: 15px 5px;
+    text-align: center;
+}
+
+.preco-item a:hover{
+    background-color: black;
+    color: #FFF;
+    transition: 1s;
+}
+
+.preco-item .bronze{
+    color: #CD7F32;
+}
+
+.preco-item .prata{
+    color: #BAB8B5;
+}
+
+.preco-item .ouro{
+    color: #FFD700;
+}
+
+@media (max-width: 1050px){
+
+    .preco-item:nth-child(3){
+        order: -2;
+    }
+
+    .preco-item:nth-child(2){
+        order: -1;
+    }
+
+    .preco{
+        padding: 60px 0;
+    }
+
+}
+ 
+/*Qualidade*/
+
+.qualidade{
+    max-width: 80%;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qualidade-item{
+    flex: 1 1 33%;
+    padding: 20px 20px;
+    text-align: justify;
+}
+
+.qualidade-item h2{
+    font-size: 2.2em;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+}
+
+.qualidade-item h2::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.qualidade-item:nth-of-type(3n+1) h2::before{
+    background-color: #ae81ff;
+}
+
+.qualidade-item:nth-of-type(3n+2) h2::before{
+    background-color: #f9265e;
+}
+
+.qualidade-item:nth-of-type(3n+3) h2::before{
+    background-color: #66d9eb;
+}
+
+.qualidade-item p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #7c7c7c;
+}
+
+/*NewsLetter*/
+
+.newsletter{
+    background-color: #f7f7f7;
+    padding: 60px calc((100% - 80%) / 2); /*Este Calc é como se fosse o margin: 0 auto para o padding. Sendo assim nao foi preciso colocar uma div dentro da outra para alinhar ao centro.*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-info{
+    flex: 1 1 300px;
+    margin: 0 10px;
+}
+
+.newsletter-info h1{
+    font-size: 3em;
+    color: #a4a4a4;
+}
+
+.newsletter-info p{
+    font-size: 1.25em;
+    font-style: italic;
+    max-width: 250px;
+    padding: 10px 0;
+}
+
+.newsletter-form{
+    flex: 2 1 300px;
+    margin: 0 10px;
+    align-self: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input{
+    flex: 3 1 250px;
+    font-size: 1.25em;
+    padding: 10px;
+    color: #7c7c7c;
+    font-style: italic;
+    font-family: "Nunito";
+    border: 4px solid;
+    background: transparent;
+}
+
+.newsletter-form button{
+    flex: 1 1 200px;
+    font-family: "Nunito";
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFF;
+    background-color: #2c78ff;
+    border: 0px;
+    padding: 5px 5px;
+}
+
+.footer{
+    height: 100px;
+    background-color: #2c70ff;
+    color: white;
+    font-size: 2.2em;
+    display: flex;
+    align-items: center;
+}
+
+.footer p{
+    flex: 1;
+    text-align: center;
+}
