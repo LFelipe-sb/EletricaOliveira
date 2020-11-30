@@ -107,10 +107,19 @@ img{
 }
 
 .sobre-info{ /*Estudar melhor o basis, grow e shrink*/
-    flex: 2 1 300px; /* Vai pegar o elemento e fazer ele ocupar duas vezes o tamanho dos outros conteudos*/
+    flex: 1 1 300px; /* Vai pegar o elemento e fazer ele ocupar duas vezes o tamanho dos outros conteudos*/
     margin: 0 10px;
     align-self: flex-start;
     text-align: justify;
+}
+
+.sobre-galeria{
+    flex: 1 1 300px;
+}
+
+.sobre-galeria img{
+    float: left;
+    margin: 10px;
 }
 /*No uso do Flex, o primeiro valor é o Grow que é o espacamento que o item vai ocupar em relacao ao tamanho dos demais itens do flex.*/
 /*O segundo valor é do Shrink que colocando o valor um ele continua quebrando o elemento mesmo que ja tenha chegado ao valor minimo definido no basis*/
@@ -230,10 +239,6 @@ img{
     border-bottom: 4px solid black;
 }
 
-.preco-item sup{
-    font-size: 1.5rem;
-}
-
 .preco-item ul{
     max-width: 300px;
     margin: 20px auto;
@@ -244,13 +249,18 @@ img{
     flex: 1;
 }
 
-.preco-item li:after{
+/* .preco-item li:after{
     content: '';
     display: block;
     width: 6px;
     height: 6px;
     background-color: #000;
     border-radius: 80%;
+} */
+
+.preco-item img{
+    border: 3px solid black;
+    border-radius: 30px;
 }
 
 .preco-item li{
@@ -293,22 +303,6 @@ img{
 
 form img{
     width: 10%;
-}
-
-@media (max-width: 1050px){
-
-    .preco-item:nth-child(3){
-        order: -2;
-    }
-
-    .preco-item:nth-child(2){
-        order: -1;
-    }
-
-    .preco{
-        padding: 60px 0;
-    }
-
 }
  
 /*Qualidade*/
@@ -360,31 +354,31 @@ form img{
 
 /*NewsLetter*/
 
-.newsletter{
+.contato{
     background-color: #f7f7f7;
     padding: 60px calc((100% - 80%) / 2); /*Este Calc é como se fosse o margin: 0 auto para o padding. Sendo assim nao foi preciso colocar uma div dentro da outra para alinhar ao centro.*/
     display: flex;
     flex-wrap: wrap;
 }
 
-.newsletter-info{
+.contato-info{
     flex: 1 1 300px;
     margin: 0 10px;
 }
 
-.newsletter-info h1{
+.contato-info h1{
     font-size: 3em;
     color: #a4a4a4;
 }
 
-.newsletter-info p{
+.contato-info p{
     font-size: 1.25em;
     font-style: italic;
     max-width: 250px;
     padding: 10px 0;
 }
 
-.newsletter-form{
+.contato-form{
     flex: 2 1 300px;
     margin: 0 10px;
     align-self: center;
@@ -392,7 +386,7 @@ form img{
     flex-wrap: wrap;
 }
 
-.newsletter-form input{
+.contato-form input{
     flex: 3 1 250px;
     font-size: 1.25em;
     padding: 10px;
@@ -403,7 +397,25 @@ form img{
     background: transparent;
 }
 
-.newsletter-form button{
+.contato-wpp{
+    flex: 1 1 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contato-wpp a img{
+    width: 20%;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+
+.contato-wpp a p{
+    font-weight: bold;
+    font-size: large;
+    color: black;
+}
+
+.contato-form button{
     flex: 1 1 200px;
     font-family: "Nunito";
     font-size: 2em;
@@ -416,7 +428,7 @@ form img{
 }
 
 .footer{
-    height: 100px;
+    height: 150px;
     background-color: #2c70ff;
     color: white;
     font-size: 2.2em;
@@ -427,4 +439,35 @@ form img{
 .footer p{
     flex: 1;
     text-align: center;
+}
+
+@media (max-width: 1050px){
+
+    .preco-item:nth-child(3){
+        order: -2;
+    }
+
+    .preco-item:nth-child(2){
+        order: -1;
+    }
+
+    .preco{
+        padding: 60px 0;
+    }
+
+}
+
+@media (max-width: 400px){
+
+    *{
+        text-align: center;
+        margin: 0 20px;
+    }
+    
+    .menu-logo img{
+        width: 100%;
+    }
+
+    
+
 }
